@@ -4,9 +4,11 @@ import sys
 import os
 import jsonpickle
 
-   
 
-auth = tweepy.AppAuthHandler('','') #Add ur keys
+consumer_token = <TOKEN_KEY>
+consumer_secret = <SECRET_KEY>
+
+auth = tweepy.AppAuthHandler(consumer_token,consumer_secret) #Add ur keys
 api = tweepy.API(auth,wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 
 if (not api):
